@@ -19,4 +19,5 @@ func main() {
 	}
 
 	fmt.Println(string(res))
+	req.Body.Close()
 }
