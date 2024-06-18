@@ -1,7 +1,6 @@
 package main
 
 import (
-	"fmt"
 	"io"
 	"net/http"
 )
@@ -18,6 +17,6 @@ func main() {
 		panic(err)
 	}
 
-	fmt.Println(string(res))
+	println(res)
 	req.Body.Close()
 }
