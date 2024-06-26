@@ -43,10 +43,14 @@ func SearchCEPHandler(responseWriter http.ResponseWriter, request *http.Request)
 
 		responseWriter.Header().Set("Content-Type", "application/json")
 		responseWriter.Write(jsonData)
+
+		/*
+			Dessa forma é feito a transformação para JSON, esse metodo é usado quando não queremos declarar variavel
+			json.NewEncoder(responseWriter).Encode(cepData)
+		*/
 		return
 	}
 
-	responseWriter.Header().Set("Content-Type", "application/json")
 	responseWriter.WriteHeader(http.StatusAccepted)
 	responseWriter.Write([]byte("Hello World!"))
 }
