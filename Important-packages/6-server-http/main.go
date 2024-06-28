@@ -42,6 +42,7 @@ func SearchCEPHandler(responseWriter http.ResponseWriter, request *http.Request)
 		jsonData, err := json.Marshal(&cepData)
 
 		responseWriter.Header().Set("Content-Type", "application/json")
+		responseWriter.WriteHeader(http.StatusOK)
 		responseWriter.Write(jsonData)
 
 		/*
